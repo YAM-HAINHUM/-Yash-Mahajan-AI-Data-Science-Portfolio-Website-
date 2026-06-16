@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="leftBracketGrad" x1="320" y1="200" x2="320" y2="824" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
+    </linearGradient>
+    <linearGradient id="rightBracketGrad" x1="704" y1="200" x2="704" y2="824" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#06b6d4" stop-opacity="0.25" />
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Scale standard 1024x1024 design to 512x512 by applying a scale(0.5) transform -->
+  <g transform="scale(0.5)">
+    <!-- Glow behind the neural net -->
+    <circle cx="512" cy="512" r="200" fill="url(#centerGlow)" />
+
+    <!-- Left Bracket < -->
+    <path d="M 320 200 L 120 512 L 320 824" stroke="url(#leftBracketGrad)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Right Bracket > -->
+    <path d="M 704 200 L 904 512 L 704 824" stroke="url(#rightBracketGrad)" stroke-width="48" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Neural Network Connections -->
+    <line x1="426" y1="674" x2="512" y2="512" stroke="#ffffff" stroke-width="24" stroke-linecap="round" />
+    <line x1="512" y1="512" x2="598" y2="350" stroke="#ffffff" stroke-width="24" stroke-linecap="round" />
+    <line x1="512" y1="512" x2="360" y2="512" stroke="#06b6d4" stroke-width="16" stroke-linecap="round" />
+    <line x1="512" y1="512" x2="664" y2="512" stroke="#a855f7" stroke-width="16" stroke-linecap="round" />
+    <line x1="512" y1="512" x2="410" y2="360" stroke="#06b6d4" stroke-width="12" stroke-linecap="round" />
+    <line x1="512" y1="512" x2="614" y2="664" stroke="#a855f7" stroke-width="12" stroke-linecap="round" />
+    <line x1="360" y1="512" x2="410" y2="360" stroke="#06b6d4" stroke-width="12" stroke-linecap="round" />
+    <line x1="360" y1="512" x2="426" y2="674" stroke="#3b82f6" stroke-width="12" stroke-linecap="round" />
+    <line x1="664" y1="512" x2="598" y2="350" stroke="#a855f7" stroke-width="12" stroke-linecap="round" />
+    <line x1="664" y1="512" x2="614" y2="664" stroke="#a855f7" stroke-width="12" stroke-linecap="round" />
+
+    <!-- Node Circles -->
+    <!-- Left node (blue) -->
+    <circle cx="360" cy="512" r="28" fill="#3b82f6" stroke="#ffffff" stroke-width="4" />
+    <!-- Right node (purple) -->
+    <circle cx="664" cy="512" r="28" fill="#a855f7" stroke="#ffffff" stroke-width="4" />
+    <!-- Bottom node (light cyan) -->
+    <circle cx="426" cy="674" r="35" fill="#a5f3fc" stroke="#ffffff" stroke-width="4" />
+    <!-- Top node (light cyan) -->
+    <circle cx="598" cy="350" r="35" fill="#a5f3fc" stroke="#ffffff" stroke-width="4" />
+    <!-- Top left node (cyan) -->
+    <circle cx="410" cy="360" r="24" fill="#06b6d4" stroke="#ffffff" stroke-width="4" />
+    <!-- Bottom right node (purple) -->
+    <circle cx="614" cy="664" r="24" fill="#a855f7" stroke="#ffffff" stroke-width="4" />
+    
+    <!-- Central core node (white outer, cyan inner) -->
+    <circle cx="512" cy="512" r="45" fill="#ffffff" />
+    <circle cx="512" cy="512" r="15" fill="#06b6d4" />
+  </g>
+</svg>
