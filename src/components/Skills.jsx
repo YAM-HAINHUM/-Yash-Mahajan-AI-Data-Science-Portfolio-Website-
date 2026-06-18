@@ -81,7 +81,7 @@ export default function Skills() {
   };
 
   return (
-    <section id="skills" className="py-24 bg-slate-50/50 dark:bg-slate-900/10">
+    <section id="skills" className="py-24 bg-theme-bg/50 dark:bg-theme-bg/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -89,7 +89,7 @@ export default function Skills() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             03 / Expertise
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             Skills & Technologies
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -103,14 +103,14 @@ export default function Skills() {
               return (
                 <div
                   key={idx}
-                  className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-white/40 dark:bg-slate-900/45 border border-slate-200 dark:border-white/5 shadow-sm hover:border-brand-cyan/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition-all duration-300"
+                  className="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-theme-sec/45 dark:bg-theme-card/45 border border-theme-border shadow-sm hover:border-brand-cyan/30 hover:shadow-[0_0_15px_rgba(6,182,212,0.15)] transition-all duration-300"
                 >
                   <IconComponent
                     size={14}
                     style={{ color: skill.color }}
                     className="drop-shadow-[0_0_4px_rgba(6,182,212,0.15)]"
                   />
-                  <span className="text-xs font-semibold text-slate-700 dark:text-slate-300">
+                  <span className="text-xs font-semibold text-theme-text">
                     {skill.name}
                   </span>
                 </div>
@@ -128,7 +128,7 @@ export default function Skills() {
               className={`flex items-center space-x-2 px-5 py-3 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-300 border cursor-pointer ${
                 activeCategory === cat.id
                   ? 'bg-gradient-to-r from-brand-cyan to-brand-purple text-white border-transparent shadow-[0_4px_15px_rgba(168,85,247,0.3)]'
-                  : 'bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-slate-900'
+                  : 'bg-theme-sec dark:bg-theme-bg text-theme-muted border-theme-border hover:bg-theme-bg dark:hover:bg-theme-sec'
               }`}
             >
               {getCategoryIcon(cat.id)}
@@ -156,7 +156,7 @@ export default function Skills() {
                     <motion.div
                       key={idx}
                       variants={itemVariants}
-                      className="glass-card p-5 rounded-2xl border border-slate-200 dark:border-white/5 text-left"
+                      className="glass-card p-5 rounded-2xl border border-theme-border text-left"
                     >
                       {/* Name & Percentage */}
                       <div className="flex items-center justify-between mb-3">
@@ -164,7 +164,7 @@ export default function Skills() {
                           <div className="p-1 rounded-md bg-brand-cyan/10 text-brand-cyan">
                             <CheckCircle size={14} />
                           </div>
-                          <span className="font-bold text-slate-800 dark:text-slate-200">
+                          <span className="font-bold text-theme-text">
                             {skill.name}
                           </span>
                         </div>
@@ -174,7 +174,7 @@ export default function Skills() {
                       </div>
 
                       {/* Animated Skill Bar */}
-                      <div className="w-full h-2 bg-slate-200 dark:bg-slate-800/80 rounded-full overflow-hidden">
+                      <div className="w-full h-2 bg-theme-bg dark:bg-theme-sec/80 rounded-full overflow-hidden">
                         <motion.div
                           className="h-full bg-gradient-to-r from-brand-cyan via-brand-purple to-brand-pink rounded-full"
                           initial={{ width: '0%' }}
@@ -191,15 +191,15 @@ export default function Skills() {
         </div>
 
         {/* Quick Tech Grid Showcase (Recruiter scanning panel) */}
-        <div className="mt-16 pt-12 border-t border-slate-200 dark:border-slate-800 max-w-5xl mx-auto">
-          <h4 className="text-sm uppercase tracking-widest font-mono font-bold text-slate-400 dark:text-slate-500 mb-6">
+        <div className="mt-16 pt-12 border-t border-theme-border max-w-5xl mx-auto">
+          <h4 className="text-sm uppercase tracking-widest font-mono font-bold text-theme-muted mb-6">
             All Technologies (Keywords for Recruiter ATS)
           </h4>
           <div className="flex flex-wrap justify-center gap-2">
             {categories.flatMap(c => c.items).map((skill, index) => (
               <div 
                 key={index} 
-                className="px-3 py-1.5 rounded-md text-xs font-semibold bg-white dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-slate-600 dark:text-slate-400 hover:border-brand-cyan hover:text-brand-cyan transition-colors"
+                className="px-3 py-1.5 rounded-md text-xs font-semibold bg-theme-sec dark:bg-theme-card border border-theme-border text-theme-muted hover:border-brand-cyan hover:text-brand-cyan transition-colors"
               >
                 {skill.name}
               </div>

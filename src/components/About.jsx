@@ -40,7 +40,7 @@ export default function About() {
   };
 
   return (
-    <section id="about" className="py-24 bg-slate-50/50 dark:bg-slate-900/10">
+    <section id="about" className="py-24 bg-theme-bg/50 dark:bg-theme-bg/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -48,7 +48,7 @@ export default function About() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             01 / Background
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             About Me
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -65,26 +65,25 @@ export default function About() {
           
           {/* Left Text Column */}
           <motion.div className="lg:col-span-7 space-y-6 text-left" variants={itemVariants}>
-            <h4 className="text-xl sm:text-2xl font-bold text-slate-800 dark:text-white">
+            <h4 className="text-xl sm:text-2xl font-bold text-theme-text">
               Designing the future of <span className="text-gradient">Artificial Intelligence</span>
             </h4>
-            <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            <p className="text-base text-theme-muted leading-relaxed font-normal">
               {intro}
             </p>
-            <p className="text-base text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+            <p className="text-base text-theme-muted leading-relaxed font-normal">
               {description}
             </p>
 
-            {/* Strengths / Core Competencies */}
             <div className="space-y-3 pt-2">
-              <h5 className="text-sm uppercase tracking-wider font-semibold text-slate-800 dark:text-slate-300 font-mono">
+              <h5 className="text-sm uppercase tracking-wider font-semibold text-theme-text font-mono">
                 Core Strengths
               </h5>
               <div className="flex flex-wrap gap-2">
                 {strengths.map((strength, index) => (
                   <span 
                     key={index} 
-                    className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-white dark:bg-slate-800 border border-slate-200 dark:border-white/5 text-slate-700 dark:text-slate-300 shadow-sm"
+                    className="flex items-center space-x-1 px-3 py-1.5 rounded-lg text-xs font-semibold bg-theme-sec dark:bg-theme-card border border-theme-border text-theme-text shadow-sm"
                   >
                     <ShieldCheck size={14} className="text-brand-cyan" />
                     <span>{strength}</span>
@@ -102,13 +101,13 @@ export default function About() {
                   key={idx} 
                   className="glass-card p-5 rounded-2xl flex flex-col items-start text-left"
                 >
-                  <div className="p-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-white/5 mb-4 shadow-inner">
+                  <div className="p-2.5 rounded-xl bg-theme-bg dark:bg-theme-sec border border-theme-border mb-4 shadow-inner">
                     {getIcon(fact.label)}
                   </div>
-                  <span className="text-xs font-mono uppercase tracking-widest text-slate-400 dark:text-slate-500 mb-1">
+                  <span className="text-xs font-mono uppercase tracking-widest text-theme-muted mb-1">
                     {fact.label}
                   </span>
-                  <span className="text-sm sm:text-base font-bold text-slate-800 dark:text-slate-200 leading-tight">
+                  <span className="text-sm sm:text-base font-bold text-theme-text leading-tight">
                     {fact.value}
                   </span>
                 </div>
@@ -121,7 +120,7 @@ export default function About() {
               <span className="absolute right-4 bottom-2 text-8xl font-serif text-brand-purple/10 pointer-events-none select-none">
                 "
               </span>
-              <p className="text-xs uppercase tracking-widest font-mono text-slate-400 dark:text-slate-500 mb-2 font-bold">
+              <p className="text-xs uppercase tracking-widest font-mono text-theme-muted mb-2 font-bold">
                 Personal Motto
               </p>
               <blockquote className="text-sm sm:text-base font-bold text-gradient leading-relaxed italic">

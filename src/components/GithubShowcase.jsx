@@ -256,7 +256,7 @@ export default function GithubShowcase() {
   };
 
   return (
-    <section id="github" className="py-24 bg-white dark:bg-slate-950">
+    <section id="github" className="py-24 bg-theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -264,7 +264,7 @@ export default function GithubShowcase() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             06 / Version Control
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             GitHub Showcase
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -275,7 +275,7 @@ export default function GithubShowcase() {
           
           {/* Column 1: Live Profile summary */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6 text-left">
-            <div className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col justify-between h-full relative overflow-hidden">
+            <div className="glass-card p-6 rounded-2xl border border-theme-border flex flex-col justify-between h-full relative overflow-hidden">
               <div className="absolute top-0 right-0 w-24 h-24 bg-brand-cyan/5 rounded-full filter blur-xl" />
               
               <div>
@@ -295,7 +295,7 @@ export default function GithubShowcase() {
                     )}
                   </div>
                   <div>
-                    <h4 className="text-lg font-bold text-slate-800 dark:text-white flex items-center space-x-2">
+                    <h4 className="text-lg font-bold text-theme-text flex items-center space-x-2">
                       <span>{profileData?.name || username}</span>
                     </h4>
                     <a 
@@ -310,38 +310,38 @@ export default function GithubShowcase() {
                 </div>
 
                 {/* Profile Bio */}
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+                <p className="text-sm text-theme-muted leading-relaxed mb-6">
                   {profileData?.bio || 'Artificial Intelligence & Data Science engineering undergraduate student. Actively contributing, programming, and learning.'}
                 </p>
 
                 {/* Profile Stats Cards */}
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-center">
+                  <div className="p-3.5 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border text-center">
                     <Folder size={16} className="text-brand-cyan mx-auto mb-2" />
-                    <span className="block text-xl font-black text-slate-800 dark:text-white font-mono">
+                    <span className="block text-xl font-black text-theme-text font-mono">
                       50+
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-slate-400 font-bold font-mono">
+                    <span className="text-[9px] uppercase tracking-wider text-theme-muted font-bold font-mono">
                       Repos
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-center">
+                  <div className="p-3.5 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border text-center">
                     <Users size={16} className="text-brand-purple mx-auto mb-2" />
-                    <span className="block text-xl font-black text-slate-800 dark:text-white font-mono">
+                    <span className="block text-xl font-black text-theme-text font-mono">
                       3+
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-slate-400 font-bold font-mono">
+                    <span className="text-[9px] uppercase tracking-wider text-theme-muted font-bold font-mono">
                       Collaborators
                     </span>
                   </div>
 
-                  <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-center">
+                  <div className="p-3.5 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border text-center">
                     <Star size={16} className="text-amber-500 mx-auto mb-2" />
-                    <span className="block text-xl font-black text-slate-800 dark:text-white font-mono">
+                    <span className="block text-xl font-black text-theme-text font-mono">
                       {loading ? '..' : totalStars}
                     </span>
-                    <span className="text-[9px] uppercase tracking-wider text-slate-400 font-bold font-mono">
+                    <span className="text-[9px] uppercase tracking-wider text-theme-muted font-bold font-mono">
                       Stars
                     </span>
                   </div>
@@ -349,8 +349,8 @@ export default function GithubShowcase() {
               </div>
 
               {/* Language breakdown */}
-              <div className="mt-6 pt-6 border-t border-slate-100 dark:border-slate-900">
-                <h5 className="text-xs uppercase tracking-widest font-mono font-bold text-slate-400 mb-4 flex items-center space-x-1.5">
+              <div className="mt-6 pt-6 border-t border-theme-border">
+                <h5 className="text-xs uppercase tracking-widest font-mono font-bold text-theme-muted mb-4 flex items-center space-x-1.5">
                   <Code size={12} className="text-brand-purple" />
                   <span>Primary Languages</span>
                 </h5>
@@ -358,10 +358,10 @@ export default function GithubShowcase() {
                   {finalLanguageList.map((lang, idx) => (
                     <div key={idx} className="space-y-1">
                       <div className="flex justify-between text-xs font-semibold">
-                        <span className="text-slate-700 dark:text-slate-300">{lang.name}</span>
-                        <span className="text-slate-400 font-mono">{lang.percentage}%</span>
+                        <span className="text-theme-text">{lang.name}</span>
+                        <span className="text-theme-muted font-mono">{lang.percentage}%</span>
                       </div>
-                      <div className="h-1.5 w-full bg-slate-100 dark:bg-slate-800 rounded-full overflow-hidden">
+                      <div className="h-1.5 w-full bg-theme-bg dark:bg-theme-sec rounded-full overflow-hidden">
                         <div 
                           className="h-full" 
                           style={{ 
@@ -381,18 +381,18 @@ export default function GithubShowcase() {
           <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
             
             {/* Heatmap calendar */}
-            <div className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5 text-left flex-grow flex flex-col justify-between">
+            <div className="glass-card p-6 rounded-2xl border border-theme-border text-left flex-grow flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between mb-4">
                   <div>
-                    <h4 className="text-base font-bold text-slate-800 dark:text-white">
+                    <h4 className="text-base font-bold text-theme-text">
                       Contribution Heatmap
                     </h4>
-                    <p className="text-xs text-slate-500 dark:text-slate-400">
+                    <p className="text-xs text-theme-muted">
                       Commit contributions mapped across GitHub projects
                     </p>
                   </div>
-                  <FaGithub size={16} className="text-slate-400" />
+                  <FaGithub size={16} className="text-theme-muted" />
                 </div>
 
                 {/* Heatmap Image */}
@@ -400,7 +400,7 @@ export default function GithubShowcase() {
                   <img 
                     src={githubGraphImg} 
                     alt="GitHub Contribution Heatmap" 
-                    className="w-full rounded-xl border border-slate-200/50 dark:border-white/5 shadow-inner dark:opacity-90 dark:brightness-95"
+                    className="w-full rounded-xl border border-theme-border shadow-inner dark:opacity-90 dark:brightness-95"
                     onContextMenu={(e) => e.preventDefault()}
                     draggable="false"
                   />
@@ -408,14 +408,14 @@ export default function GithubShowcase() {
               </div>
 
               {/* GitHub Readme Stats Embed (Stunning visual addition) */}
-              <div className="mt-6 pt-6 border-t border-slate-100 dark:border-slate-900 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 flex items-start space-x-3">
+              <div className="mt-6 pt-6 border-t border-theme-border grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div className="p-4 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border flex items-start space-x-3">
                   <BarChart2 className="text-brand-cyan" size={18} />
                   <div>
-                    <h5 className="text-xs font-bold text-slate-800 dark:text-white">
+                    <h5 className="text-xs font-bold text-theme-text">
                       Profile Activity Graph
                     </h5>
-                    <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-[10px] text-theme-muted mt-0.5">
                       {loading ? 'Fetching activity...' : 
                        activityStats.totalEvents > 0 ? 
                        `Recent activity: ${activityStats.commits} commits, ${activityStats.pushes} pushes, ${activityStats.prs} pull requests across public repositories.` : 
@@ -432,16 +432,16 @@ export default function GithubShowcase() {
                   </div>
                 </div>
 
-                <div className="p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 flex items-start space-x-3">
+                <div className="p-4 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border flex items-start space-x-3">
                   <Calendar className="text-brand-purple" size={18} />
                   <div>
-                    <h5 className="text-xs font-bold text-slate-800 dark:text-white">
+                    <h5 className="text-xs font-bold text-theme-text">
                       User Member Since
                     </h5>
-                    <p className="text-[10px] text-slate-500 dark:text-slate-400 mt-0.5">
+                    <p className="text-[10px] text-theme-muted mt-0.5">
                       Actively building on public and private projects since {formatYearMonth(profileData?.created_at)}.
                     </p>
-                    <span className="text-[9px] font-mono text-slate-400 mt-2 block font-bold">
+                    <span className="text-[9px] font-mono text-theme-muted mt-2 block font-bold">
                       Joined: {formatDate(profileData?.created_at)}
                     </span>
                   </div>

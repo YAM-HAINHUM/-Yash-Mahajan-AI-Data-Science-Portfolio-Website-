@@ -1,10 +1,47 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg-primary-rgb: 248, 250, 252;     /* #F8FAFC */
+  --bg-secondary-rgb: 255, 255, 255;   /* #FFFFFF */
+  --bg-card-rgb: 255, 255, 255;        /* #FFFFFF */
+  --border-primary-rgb: 15, 23, 42;    /* #0F172A */
+  
+  --bg-primary: rgb(var(--bg-primary-rgb));
+  --bg-secondary: rgb(var(--bg-secondary-rgb));
+  --bg-card: rgb(var(--bg-card-rgb));
+  --border-primary: rgba(var(--border-primary-rgb), 0.1);
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+}
+
+.dark {
+  --bg-primary-rgb: 2, 6, 23;          /* #020617 */
+  --bg-secondary-rgb: 15, 23, 42;      /* #0F172A */
+  --bg-card-rgb: 17, 24, 39;          /* #111827 */
+  --border-primary-rgb: 255, 255, 255; /* #FFFFFF */
+  
+  --bg-primary: rgb(var(--bg-primary-rgb));
+  --bg-secondary: rgb(var(--bg-secondary-rgb));
+  --bg-card: rgb(var(--bg-card-rgb));
+  --border-primary: rgba(var(--border-primary-rgb), 0.1);
+  --text-primary: #FFFFFF;
+  --text-secondary: #CBD5E1;
+}
+
 @theme {
   --color-brand-cyan: #06b6d4;
   --color-brand-purple: #a855f7;
   --color-brand-blue: #3b82f6;
   --color-brand-pink: #ec4899;
+
+  --color-theme-bg: var(--bg-primary);
+  --color-theme-sec: var(--bg-secondary);
+  --color-theme-card: var(--bg-card);
+  --color-theme-border: var(--border-primary);
+  --color-theme-text: var(--text-primary);
+  --color-theme-muted: var(--text-secondary);
   
   --animate-float: float 6s ease-in-out infinite;
   --animate-float-delayed: float-delayed 8s ease-in-out infinite;
@@ -62,34 +99,34 @@ body {
 
 /* Glassmorphism Styles */
 .glass-panel {
-  background: rgba(255, 255, 255, 0.45);
+  background: rgba(var(--bg-secondary-rgb), 0.45);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid var(--border-primary);
   transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
 
 .dark .glass-panel {
-  background: rgba(15, 23, 42, 0.45);
+  background: rgba(var(--bg-secondary-rgb), 0.45);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-primary);
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.65);
+  background: rgba(var(--bg-card-rgb), 0.65);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid var(--border-primary);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .dark .glass-card {
-  background: rgba(30, 41, 59, 0.35);
+  background: rgba(var(--bg-card-rgb), 0.35);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-primary);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -122,7 +159,7 @@ body {
 }
 
 .bg-gradient-mesh {
-  background-color: #f8fafc;
+  background-color: var(--bg-primary);
   background-image: 
     radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.05) 0px, transparent 50%),
@@ -132,7 +169,7 @@ body {
 }
 
 .dark .bg-gradient-mesh {
-  background-color: #030712;
+  background-color: var(--bg-primary);
   background-image: 
     radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.15) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.15) 0px, transparent 50%),

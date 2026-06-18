@@ -7,6 +7,24 @@
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <!-- Prevent theme flickering on page load -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        let theme = 'dark';
+        if (savedTheme === 'dark' || savedTheme === 'light') {
+          theme = savedTheme;
+        } else if (window.matchMedia) {
+          theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+        if (theme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    
     <!-- SEO Optimization -->
     <title>Yash Anil Mahajan | AI & Data Science Engineer</title>
     <meta name="description" content="Professional portfolio of Yash Anil Mahajan, an Artificial Intelligence & Data Science Engineering student specializing in Python, Machine Learning, and Full Stack development." />

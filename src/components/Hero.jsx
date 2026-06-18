@@ -59,17 +59,17 @@ export default function Hero({ onOpenResume }) {
 
           {/* Heading */}
           <div className="space-y-2">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-slate-800 dark:text-white leading-none">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-black tracking-tight text-theme-text leading-none">
               Hi, I'm <br />
               <span className="text-gradient font-black">{name}</span>
             </h1>
-            <h2 className="text-xl sm:text-2xl font-bold text-slate-700 dark:text-slate-200 flex items-center min-h-[40px] font-mono">
+            <h2 className="text-xl sm:text-2xl font-bold text-theme-text/90 flex items-center min-h-[40px] font-mono">
               <span ref={el} />
             </h2>
           </div>
 
           {/* Summary */}
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl font-normal leading-relaxed">
+          <p className="text-base sm:text-lg text-theme-muted max-w-xl font-normal leading-relaxed">
             {summary}
           </p>
 
@@ -85,7 +85,7 @@ export default function Hero({ onOpenResume }) {
             
             <button
               onClick={() => handleScrollTo('projects')}
-              className="flex items-center space-x-2 px-6 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider glass-panel text-slate-800 dark:text-white hover:bg-slate-100/50 dark:hover:bg-slate-800/50 hover:scale-105 active:scale-100 transition-all cursor-pointer border-slate-200 dark:border-white/10"
+              className="flex items-center space-x-2 px-6 py-3.5 rounded-full text-sm font-semibold uppercase tracking-wider glass-panel text-theme-text hover:bg-theme-sec/50 dark:hover:bg-theme-card/50 hover:scale-105 active:scale-100 transition-all cursor-pointer border-theme-border"
             >
               <span>View Projects</span>
               <ArrowRight size={16} />
@@ -93,14 +93,14 @@ export default function Hero({ onOpenResume }) {
           </div>
 
           {/* Social icons */}
-          <div className="flex items-center space-x-4 pt-4 border-t border-slate-200 dark:border-slate-800 max-w-sm">
-            <span className="text-xs uppercase tracking-widest text-slate-400 font-mono">Connect:</span>
+          <div className="flex items-center space-x-4 pt-4 border-t border-theme-border max-w-sm">
+            <span className="text-xs uppercase tracking-widest text-theme-muted font-mono">Connect:</span>
             <a
               href={github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
-              className="p-2.5 rounded-full glass-panel hover:text-brand-cyan hover:scale-110 active:scale-95 transition-all text-slate-600 dark:text-slate-400"
+              className="p-2.5 rounded-full glass-panel hover:text-brand-cyan hover:scale-110 active:scale-95 transition-all text-theme-muted"
             >
               <FaGithub size={18} />
             </a>
@@ -109,14 +109,14 @@ export default function Hero({ onOpenResume }) {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
-              className="p-2.5 rounded-full glass-panel hover:text-brand-purple hover:scale-110 active:scale-95 transition-all text-slate-600 dark:text-slate-400"
+              className="p-2.5 rounded-full glass-panel hover:text-brand-purple hover:scale-110 active:scale-95 transition-all text-theme-muted"
             >
               <FaLinkedin size={18} />
             </a>
             <button
               onClick={() => handleScrollTo('contact')}
               aria-label="Email Me"
-              className="p-2.5 rounded-full glass-panel hover:text-brand-pink hover:scale-110 active:scale-95 transition-all text-slate-600 dark:text-slate-400 cursor-pointer"
+              className="p-2.5 rounded-full glass-panel hover:text-brand-pink hover:scale-110 active:scale-95 transition-all text-theme-muted cursor-pointer"
             >
               <Mail size={18} />
             </button>
@@ -139,7 +139,7 @@ export default function Hero({ onOpenResume }) {
 
             {/* Avatar Frame Container */}
             <motion.div
-              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-slate-200 dark:border-white/10 p-2 glass-panel shadow-2xl cursor-pointer"
+              className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 rounded-full overflow-hidden border-2 border-theme-border p-2 glass-panel shadow-2xl cursor-pointer"
               animate={{
                 y: [0, -10, 0]
               }}
@@ -163,7 +163,7 @@ export default function Hero({ onOpenResume }) {
                 }
               }}
             >
-              <div className="w-full h-full rounded-full overflow-hidden bg-slate-900/10 dark:bg-slate-900/50 flex items-center justify-center relative">
+              <div className="w-full h-full rounded-full overflow-hidden bg-theme-bg/10 dark:bg-theme-bg/50 flex items-center justify-center relative">
                 <img
                   src={heroImg}
                   alt={name}
@@ -173,7 +173,7 @@ export default function Hero({ onOpenResume }) {
                 />
 
                 {/* Overlay Text badge */}
-                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md glass-panel text-[10px] uppercase tracking-widest text-slate-600 dark:text-slate-300 font-bold border-slate-200 dark:border-white/5">
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-3 py-1 rounded-md glass-panel text-[10px] uppercase tracking-widest text-theme-muted font-bold border-theme-border">
                   AI_ENG.SH
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function Hero({ onOpenResume }) {
 
             {/* Floating Tech Badges (Animated with Framer Motion) */}
             <motion.div
-              className="absolute top-4 left-8 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-cyan border-slate-200 dark:border-white/10"
+              className="absolute top-4 left-8 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-cyan border-theme-border"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
             >
@@ -189,7 +189,7 @@ export default function Hero({ onOpenResume }) {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-6 left-2 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-purple border-slate-200 dark:border-white/10"
+              className="absolute bottom-6 left-2 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-purple border-theme-border"
               animate={{ y: [0, 12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
             >
@@ -197,7 +197,7 @@ export default function Hero({ onOpenResume }) {
             </motion.div>
 
             <motion.div
-              className="absolute top-12 right-2 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-blue-500 border-slate-200 dark:border-white/10"
+              className="absolute top-12 right-2 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-blue-500 border-theme-border"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 0.5 }}
             >
@@ -205,7 +205,7 @@ export default function Hero({ onOpenResume }) {
             </motion.div>
 
             <motion.div
-              className="absolute bottom-10 right-6 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-pink border-slate-200 dark:border-white/10"
+              className="absolute bottom-10 right-6 p-3 rounded-xl glass-panel shadow-lg flex items-center justify-center text-brand-pink border-theme-border"
               animate={{ y: [0, 10, 0] }}
               transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
             >
@@ -218,8 +218,8 @@ export default function Hero({ onOpenResume }) {
 
       {/* Mouse scroll indicator */}
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center justify-center space-y-1">
-        <span className="text-[10px] tracking-widest text-slate-400 font-mono uppercase">Scroll</span>
-        <div className="w-5 h-9 rounded-full border-2 border-slate-300 dark:border-slate-700 flex items-start justify-center p-1.5">
+        <span className="text-[10px] tracking-widest text-theme-muted font-mono uppercase">Scroll</span>
+        <div className="w-5 h-9 rounded-full border-2 border-theme-border flex items-start justify-center p-1.5">
           <div className="w-1.5 h-1.5 rounded-full bg-brand-purple dark:bg-brand-cyan animate-scroll" />
         </div>
       </div>

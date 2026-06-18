@@ -109,7 +109,7 @@ export default function Navbar({ onOpenResume }) {
               <div className="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center font-bold text-white shadow-[0_4px_10px_rgba(168,85,247,0.3)]">
                 Y
               </div>
-              <span className="font-bold text-lg text-slate-800 dark:text-white tracking-wider font-mono">
+              <span className="font-bold text-lg text-theme-text tracking-wider font-mono">
                 YAM
               </span>
             </div>
@@ -134,7 +134,7 @@ export default function Navbar({ onOpenResume }) {
                 className={`relative px-3 py-2 text-xs font-semibold uppercase tracking-wider transition-colors duration-200 focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none rounded-md cursor-pointer ${
                   activeSection === item.id
                     ? 'text-brand-purple dark:text-brand-cyan font-bold'
-                    : 'text-slate-600 dark:text-slate-400 hover:text-brand-purple dark:hover:text-brand-cyan'
+                    : 'text-theme-muted hover:text-brand-purple dark:hover:text-brand-cyan'
                 } ${
                   activeSection === item.id
                     ? ''
@@ -159,7 +159,7 @@ export default function Navbar({ onOpenResume }) {
             <button
               onClick={toggleTheme}
               aria-label="Toggle Theme"
-              className="p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800/50 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none"
+              className="p-2 rounded-lg text-theme-muted hover:bg-theme-bg dark:hover:bg-theme-sec/50 transition-colors cursor-pointer focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none"
             >
               {theme === 'dark' ? <Sun size={18} className="text-amber-400" /> : <Moon size={18} />}
             </button>
@@ -175,10 +175,10 @@ export default function Navbar({ onOpenResume }) {
                 <span className="hidden xs:inline">Resume</span>
               </button>
               {/* Tooltip */}
-              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-slate-900 dark:bg-slate-800 text-white dark:text-slate-100 text-[10px] font-bold rounded-lg shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50 border border-slate-700/30">
+              <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2.5 py-1 bg-theme-sec dark:bg-theme-card text-theme-text text-[10px] font-bold rounded-lg shadow-xl opacity-0 pointer-events-none group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap z-50 border border-theme-border">
                 Download Resume (PDF)
                 {/* Tooltip Arrow */}
-                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-slate-900 dark:border-t-slate-800" />
+                <div className="absolute top-full left-1/2 -translate-x-1/2 border-4 border-transparent border-t-theme-sec dark:border-t-theme-card" />
               </div>
             </div>
 
@@ -186,7 +186,7 @@ export default function Navbar({ onOpenResume }) {
             <button
               onClick={() => setIsOpen(!isOpen)}
               aria-label={isOpen ? "Close Menu" : "Open Menu"}
-              className="xl:hidden p-2 rounded-lg text-slate-600 dark:text-slate-400 hover:bg-slate-200 dark:hover:bg-slate-800/50 transition-colors focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none cursor-pointer"
+              className="xl:hidden p-2 rounded-lg text-theme-muted hover:bg-theme-bg dark:hover:bg-theme-sec/50 transition-colors focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none cursor-pointer"
             >
               {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -198,14 +198,14 @@ export default function Navbar({ onOpenResume }) {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 z-30 xl:hidden bg-slate-900/60 backdrop-blur-md flex justify-end"
+            className="fixed inset-0 z-30 xl:hidden bg-theme-bg/60 backdrop-blur-md flex justify-end"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={() => setIsOpen(false)}
           >
             <motion.div
-              className="w-4/5 max-w-sm h-full bg-white dark:bg-slate-950 p-6 flex flex-col justify-between shadow-2xl"
+              className="w-4/5 max-w-sm h-full bg-theme-sec dark:bg-theme-bg p-6 flex flex-col justify-between shadow-2xl"
               initial={{ x: '100%' }}
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
@@ -214,21 +214,21 @@ export default function Navbar({ onOpenResume }) {
             >
               <div>
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8 pb-4 border-b border-slate-100 dark:border-slate-800">
+                <div className="flex items-center justify-between mb-8 pb-4 border-b border-theme-border">
                   <div className="flex items-center space-x-2">
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-cyan to-brand-purple flex items-center justify-center font-bold text-white text-sm">
                       Y
                     </div>
-                    <span className="font-bold text-sm text-slate-800 dark:text-white tracking-wider font-mono">
+                    <span className="font-bold text-sm text-theme-text tracking-wider font-mono">
                       YAM.OS
                     </span>
                   </div>
                   <button
                     onClick={() => setIsOpen(false)}
                     aria-label="Close menu"
-                    className="p-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none cursor-pointer"
+                    className="p-2 rounded-lg hover:bg-theme-bg dark:hover:bg-theme-sec focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none cursor-pointer"
                   >
-                    <X size={20} className="text-slate-600 dark:text-slate-400" />
+                    <X size={20} className="text-theme-muted" />
                   </button>
                 </div>
 
@@ -242,7 +242,7 @@ export default function Navbar({ onOpenResume }) {
                       className={`flex items-center justify-between px-4 py-3 rounded-lg text-sm font-semibold uppercase tracking-wider text-left transition-all focus-visible:ring-2 focus-visible:ring-brand-cyan focus:outline-none cursor-pointer ${
                         activeSection === item.id
                           ? 'bg-gradient-to-r from-brand-cyan/10 to-brand-purple/10 text-brand-purple dark:text-brand-cyan border-l-4 border-brand-cyan'
-                          : 'text-slate-600 dark:text-slate-400 hover:bg-slate-50 dark:hover:bg-slate-900/50'
+                          : 'text-theme-muted hover:bg-theme-bg dark:hover:bg-theme-sec/50'
                       }`}
                     >
                       <span>{item.label}</span>
@@ -253,7 +253,7 @@ export default function Navbar({ onOpenResume }) {
               </div>
 
               {/* Mobile Actions Footer */}
-              <div className="mt-8 pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col space-y-3">
+              <div className="mt-8 pt-4 border-t border-theme-border flex flex-col space-y-3">
                 <button
                   onClick={() => {
                     setIsOpen(false);

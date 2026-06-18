@@ -36,7 +36,7 @@ export default function Education() {
   };
 
   return (
-    <section id="education" className="py-24 bg-white dark:bg-slate-950">
+    <section id="education" className="py-24 bg-theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -44,7 +44,7 @@ export default function Education() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             02 / Academia
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             Education Timeline
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -60,7 +60,7 @@ export default function Education() {
         >
           
           {/* Left: Timeline Milestones */}
-          <div className="lg:col-span-6 relative border-l border-slate-200 dark:border-slate-800 ml-4 pl-8 space-y-12 text-left">
+          <div className="lg:col-span-6 relative border-l border-theme-border ml-4 pl-8 space-y-12 text-left">
             {timeline.map((item, index) => (
               <motion.div 
                 key={item.id} 
@@ -68,17 +68,17 @@ export default function Education() {
                 variants={itemVariants}
               >
                 {/* Timeline node marker */}
-                <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-white dark:bg-slate-950 border-2 border-brand-purple dark:border-brand-cyan flex items-center justify-center shadow-md">
+                <div className="absolute -left-12 top-1 w-8 h-8 rounded-full bg-theme-bg border-2 border-brand-purple dark:border-brand-cyan flex items-center justify-center shadow-md">
                   <GraduationCap size={14} className="text-brand-purple dark:text-brand-cyan" />
                 </div>
 
                 {/* Content */}
-                <span className="text-xs font-mono uppercase tracking-wider text-slate-400 dark:text-slate-500 flex items-center space-x-1.5 mb-1">
+                <span className="text-xs font-mono uppercase tracking-wider text-theme-muted flex items-center space-x-1.5 mb-1">
                   <Calendar size={12} />
                   <span>{item.duration || item.year}</span>
                 </span>
                 
-                <h4 className="text-xl font-bold text-slate-800 dark:text-white mb-1">
+                <h4 className="text-xl font-bold text-theme-text mb-1">
                   {item.institution}
                 </h4>
                 
@@ -87,7 +87,7 @@ export default function Education() {
                 </p>
 
                 {item.university && (
-                  <p className="text-xs text-slate-500 dark:text-slate-400 font-mono mb-3">
+                  <p className="text-xs text-theme-muted font-mono mb-3">
                     {item.university}
                   </p>
                 )}
@@ -110,7 +110,7 @@ export default function Education() {
                     {item.scores.map((score, sIdx) => (
                       <span 
                         key={sIdx}
-                        className="px-2 py-1 rounded bg-slate-100 dark:bg-slate-900 border border-slate-200 dark:border-white/5 text-[10px] font-semibold text-slate-600 dark:text-slate-400"
+                        className="px-2 py-1 rounded bg-theme-bg border border-theme-border text-[10px] font-semibold text-theme-muted"
                       >
                         {score.label}: <span className="font-bold text-brand-purple dark:text-brand-cyan">{score.value}</span>
                       </span>
@@ -119,7 +119,7 @@ export default function Education() {
                 )}
 
                 {item.details && (
-                  <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed max-w-lg">
+                  <p className="text-sm text-theme-muted leading-relaxed max-w-lg">
                     {item.details}
                   </p>
                 )}
@@ -132,12 +132,12 @@ export default function Education() {
             className="lg:col-span-6 space-y-6"
             variants={itemVariants}
           >
-            <div className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5 shadow-xl text-left">
+            <div className="glass-card p-6 rounded-2xl border border-theme-border shadow-xl text-left">
               <div className="mb-6">
-                <h4 className="text-lg font-bold text-slate-800 dark:text-white">
+                <h4 className="text-lg font-bold text-theme-text">
                   Academic Performance Chart
                 </h4>
-                <p className="text-xs text-slate-500 dark:text-slate-400">
+                <p className="text-xs text-theme-muted">
                   Semester GPA tracking across Bachelor of Engineering (AI & DS)
                 </p>
               </div>
@@ -196,13 +196,13 @@ export default function Education() {
               </div>
 
               {/* Semesters list display grid */}
-              <div className="grid grid-cols-5 gap-2 mt-6 pt-4 border-t border-slate-100 dark:border-slate-900">
+              <div className="grid grid-cols-5 gap-2 mt-6 pt-4 border-t border-theme-border">
                 {chartData.map((sem, idx) => (
                   <div key={idx} className="text-center">
-                    <span className="block text-[10px] text-slate-400 dark:text-slate-500 font-mono font-bold uppercase">
+                    <span className="block text-[10px] text-theme-muted font-mono font-bold uppercase">
                       {sem.sem}
                     </span>
-                    <span className="text-sm font-bold text-slate-700 dark:text-slate-300">
+                    <span className="text-sm font-bold text-theme-text">
                       {sem.gpa.toFixed(2)}
                     </span>
                   </div>
@@ -216,10 +216,10 @@ export default function Education() {
                 <CheckCircle2 size={20} />
               </div>
               <div>
-                <h5 className="text-sm font-bold text-slate-800 dark:text-white">
+                <h5 className="text-sm font-bold text-theme-text">
                   Engineering Distinction
                 </h5>
-                <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed mt-1">
+                <p className="text-xs text-theme-muted leading-relaxed mt-1">
                   Maintained academic excellence with a semester peak GPA of 9.35 in Sem 3. Consistently ranking within the top tier of students in Datta Meghe College of Engineering.
                 </p>
               </div>

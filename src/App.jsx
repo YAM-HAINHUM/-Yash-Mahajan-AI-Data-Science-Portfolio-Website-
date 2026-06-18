@@ -35,7 +35,7 @@ function AppContent() {
       </AnimatePresence>
 
       {!isLoading && (
-        <div className="relative min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+        <div className="relative min-h-screen bg-theme-bg text-theme-text transition-colors duration-300">
           {/* Animated Background Canvas */}
           <ParticleBg />
 

@@ -26,7 +26,7 @@ export default function Projects() {
   const displayedProjects = showAll ? filteredProjects : filteredProjects.slice(0, 6);
 
   return (
-    <section id="projects" className="py-24 bg-slate-50/50 dark:bg-slate-900/10">
+    <section id="projects" className="py-24 bg-theme-bg/50 dark:bg-theme-bg/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -34,7 +34,7 @@ export default function Projects() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             05 / Projects
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             Technical Showroom
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -49,7 +49,7 @@ export default function Projects() {
               className={`px-4 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider transition-all duration-200 border cursor-pointer ${
                 filter === cat
                   ? 'bg-gradient-to-r from-brand-cyan to-brand-purple text-white border-transparent shadow-[0_4px_12px_rgba(6,182,212,0.2)]'
-                  : 'bg-white dark:bg-slate-950 text-slate-600 dark:text-slate-400 border-slate-200 dark:border-white/5 hover:bg-slate-50 dark:hover:bg-slate-900'
+                  : 'bg-theme-sec dark:bg-theme-bg text-theme-muted border-theme-border hover:bg-theme-bg dark:hover:bg-theme-sec'
               }`}
             >
               {cat}
@@ -71,7 +71,7 @@ export default function Projects() {
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: 0.4 }}
-                className="glass-card flex flex-col justify-between h-full rounded-2xl border border-slate-200 dark:border-white/5 overflow-hidden shadow-lg group relative"
+                className="glass-card flex flex-col justify-between h-full rounded-2xl border border-theme-border overflow-hidden shadow-lg group relative"
               >
                 {/* Project Image Panel */}
                 <div className="h-48 w-full overflow-hidden bg-slate-900 relative">
@@ -100,7 +100,7 @@ export default function Projects() {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="p-3 bg-white dark:bg-slate-900 text-slate-800 dark:text-white rounded-full hover:scale-110 transition-transform hover:text-brand-cyan shadow-lg"
+                      className="p-3 bg-theme-sec dark:bg-theme-card text-theme-text rounded-full hover:scale-110 transition-transform hover:text-brand-cyan shadow-lg"
                       title="GitHub Repository"
                     >
                       <FaGithub size={20} />
@@ -108,7 +108,7 @@ export default function Projects() {
                     {project.liveUrl && (
                       <a
                         href={project.liveUrl}
-                        className="p-3 bg-white dark:bg-slate-900 text-slate-800 dark:text-white rounded-full hover:scale-110 transition-transform hover:text-brand-purple shadow-lg"
+                        className="p-3 bg-theme-sec dark:bg-theme-card text-theme-text rounded-full hover:scale-110 transition-transform hover:text-brand-purple shadow-lg"
                         title="Live Demo"
                       >
                         <ExternalLink size={20} />
@@ -120,10 +120,10 @@ export default function Projects() {
                 {/* Details Container */}
                 <div className="p-6 flex flex-col justify-between flex-grow text-left space-y-4">
                   <div className="space-y-2">
-                    <h4 className="text-lg font-bold text-slate-800 dark:text-white leading-tight group-hover:text-brand-purple dark:group-hover:text-brand-cyan transition-colors">
+                    <h4 className="text-lg font-bold text-theme-text leading-tight group-hover:text-brand-purple dark:group-hover:text-brand-cyan transition-colors">
                       {project.title}
                     </h4>
-                    <p className="text-xs text-slate-600 dark:text-slate-400 font-normal leading-relaxed line-clamp-3">
+                    <p className="text-xs text-theme-muted font-normal leading-relaxed line-clamp-3">
                       {project.description}
                     </p>
                   </div>
@@ -134,7 +134,7 @@ export default function Projects() {
                       {project.tech.map((t, idx) => (
                         <span 
                           key={idx}
-                          className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-slate-100 dark:bg-slate-800/60 border border-slate-200 dark:border-white/5 text-slate-500 dark:text-slate-400"
+                          className="px-2 py-0.5 rounded text-[10px] font-mono font-semibold bg-theme-bg dark:bg-theme-sec/60 border border-theme-border text-theme-muted"
                         >
                           {t}
                         </span>
@@ -142,11 +142,11 @@ export default function Projects() {
                     </div>
 
                     {/* Bottom social details for fallback */}
-                    <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-900 text-slate-500">
-                      <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-slate-400">
+                    <div className="flex items-center justify-between pt-2 border-t border-theme-border text-theme-muted">
+                      <span className="text-[10px] font-mono font-bold tracking-widest uppercase text-theme-muted">
                         Task Source
                       </span>
-                      <div className="flex items-center space-x-3 text-slate-400">
+                      <div className="flex items-center space-x-3 text-theme-muted">
                         <a 
                           href={project.githubUrl} 
                           target="_blank" 

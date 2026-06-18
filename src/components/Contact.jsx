@@ -101,7 +101,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white dark:bg-slate-950 relative overflow-hidden">
+    <section id="contact" className="py-24 bg-theme-bg relative overflow-hidden">
       {/* Decorative Orbs */}
       <div className="absolute -top-1/4 -right-1/4 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full filter blur-3xl pointer-events-none" />
       <div className="absolute -bottom-1/4 -left-1/4 w-[500px] h-[500px] bg-brand-purple/5 rounded-full filter blur-3xl pointer-events-none" />
@@ -113,7 +113,7 @@ export default function Contact() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             10 / Connection
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             Get In Touch
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -125,50 +125,50 @@ export default function Contact() {
           {/* Left Column: Details Cards */}
           <div className="lg:col-span-5 flex flex-col justify-between space-y-6 text-left">
             <div className="space-y-6 flex-grow">
-              <h4 className="text-2xl font-bold text-slate-800 dark:text-white">
+              <h4 className="text-2xl font-bold text-theme-text">
                 Let's discuss <br />
                 your next <span className="text-gradient">Intelligent System</span>
               </h4>
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+              <p className="text-sm text-theme-muted leading-relaxed font-normal">
                 I am actively seeking internship opportunities and entry-level positions in Artificial Intelligence, Machine Learning, and Python Development. Drop a message to connect!
               </p>
 
               {/* Contact info list */}
               <div className="space-y-4 pt-4">
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5">
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border">
                   <div className="p-3 bg-brand-cyan/10 text-brand-cyan rounded-lg">
                     <MapPin size={20} />
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase font-mono tracking-widest text-slate-400">Location</span>
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{location}</span>
+                    <span className="block text-[10px] uppercase font-mono tracking-widest text-theme-muted">Location</span>
+                    <span className="text-sm font-semibold text-theme-text">{location}</span>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5">
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border">
                   <div className="p-3 bg-brand-purple/10 text-brand-purple rounded-lg">
                     <Mail size={20} />
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase font-mono tracking-widest text-slate-400">Email</span>
-                    <a href={`mailto:${email}`} className="text-sm font-semibold text-slate-700 dark:text-slate-300 hover:text-brand-cyan transition-colors">{email}</a>
+                    <span className="block text-[10px] uppercase font-mono tracking-widest text-theme-muted">Email</span>
+                    <a href={`mailto:${email}`} className="text-sm font-semibold text-theme-text hover:text-brand-cyan transition-colors">{email}</a>
                   </div>
                 </div>
 
-                <div className="flex items-center space-x-4 p-4 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5">
+                <div className="flex items-center space-x-4 p-4 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border">
                   <div className="p-3 bg-brand-pink/10 text-brand-pink rounded-lg">
                     <Phone size={20} />
                   </div>
                   <div>
-                    <span className="block text-[10px] uppercase font-mono tracking-widest text-slate-400">Call / Phone</span>
-                    <span className="text-sm font-semibold text-slate-700 dark:text-slate-300">{phone}</span>
+                    <span className="block text-[10px] uppercase font-mono tracking-widest text-theme-muted">Call / Phone</span>
+                    <span className="text-sm font-semibold text-theme-text">{phone}</span>
                   </div>
                 </div>
               </div>
             </div>
 
             {/* Actions / Direct Connect links */}
-            <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-slate-100 dark:border-slate-900">
+            <div className="flex flex-col sm:flex-row gap-3 pt-6 border-t border-theme-border">
               {whatsapp && (
                 <a 
                   href={whatsapp}
@@ -186,7 +186,7 @@ export default function Contact() {
                   href={github} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl hover:text-brand-cyan hover:scale-105 active:scale-95 transition-all text-slate-600 dark:text-slate-400"
+                  className="p-3 bg-theme-bg hover:bg-theme-sec dark:bg-theme-bg dark:hover:bg-theme-sec border border-theme-border rounded-xl hover:text-brand-cyan hover:scale-105 active:scale-95 transition-all text-theme-muted"
                 >
                   <FaGithub size={18} />
                 </a>
@@ -194,7 +194,7 @@ export default function Contact() {
                   href={linkedin} 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="p-3 bg-slate-100 hover:bg-slate-200 dark:bg-slate-900 dark:hover:bg-slate-800 border border-slate-200 dark:border-white/5 rounded-xl hover:text-brand-purple hover:scale-105 active:scale-95 transition-all text-slate-600 dark:text-slate-400"
+                  className="p-3 bg-theme-bg hover:bg-theme-sec dark:bg-theme-bg dark:hover:bg-theme-sec border border-theme-border rounded-xl hover:text-brand-purple hover:scale-105 active:scale-95 transition-all text-theme-muted"
                 >
                   <FaLinkedin size={18} />
                 </a>
@@ -204,14 +204,14 @@ export default function Contact() {
 
           {/* Right Column: Contact Form */}
           <div className="lg:col-span-7">
-            <div className="glass-card p-6 md:p-8 rounded-3xl border border-slate-200 dark:border-white/5 shadow-xl text-left h-full flex flex-col justify-between">
+            <div className="glass-card p-6 md:p-8 rounded-3xl border border-theme-border shadow-xl text-left h-full flex flex-col justify-between">
               
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-5">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   
                   {/* Name field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="name" className="text-[10px] uppercase font-mono tracking-widest text-slate-400 font-bold">Your Name</label>
+                    <label htmlFor="name" className="text-[10px] uppercase font-mono tracking-widest text-theme-muted font-bold">Your Name</label>
                     <input 
                       type="text" 
                       id="name"
@@ -220,8 +220,8 @@ export default function Contact() {
                       value={formData.name}
                       onChange={handleInputChange}
                       placeholder="John Doe"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border text-slate-800 dark:text-white text-sm focus:outline-none transition-all ${
-                        errors.name ? 'border-red-500/70 focus:border-red-500' : 'border-slate-200 dark:border-white/5 focus:border-brand-purple'
+                      className={`w-full px-4 py-3 rounded-xl bg-theme-bg dark:bg-theme-card border text-theme-text text-sm focus:outline-none transition-all ${
+                        errors.name ? 'border-red-500/70 focus:border-red-500' : 'border-theme-border focus:border-brand-purple'
                       }`}
                     />
                     {errors.name && <p className="text-[10px] text-red-500 font-semibold flex items-center space-x-0.5"><AlertCircle size={10} /><span>{errors.name}</span></p>}
@@ -229,7 +229,7 @@ export default function Contact() {
 
                   {/* Email field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="email" className="text-[10px] uppercase font-mono tracking-widest text-slate-400 font-bold">Email Address</label>
+                    <label htmlFor="email" className="text-[10px] uppercase font-mono tracking-widest text-theme-muted font-bold">Email Address</label>
                     <input 
                       type="email" 
                       id="email"
@@ -238,8 +238,8 @@ export default function Contact() {
                       value={formData.email}
                       onChange={handleInputChange}
                       placeholder="john@example.com"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border text-slate-800 dark:text-white text-sm focus:outline-none transition-all ${
-                        errors.email ? 'border-red-500/70 focus:border-red-500' : 'border-slate-200 dark:border-white/5 focus:border-brand-purple'
+                      className={`w-full px-4 py-3 rounded-xl bg-theme-bg dark:bg-theme-card border text-theme-text text-sm focus:outline-none transition-all ${
+                        errors.email ? 'border-red-500/70 focus:border-red-500' : 'border-theme-border focus:border-brand-purple'
                       }`}
                     />
                     {errors.email && <p className="text-[10px] text-red-500 font-semibold flex items-center space-x-0.5"><AlertCircle size={10} /><span>{errors.email}</span></p>}
@@ -247,7 +247,7 @@ export default function Contact() {
 
                   {/* Phone field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="phone" className="text-[10px] uppercase font-mono tracking-widest text-slate-400 font-bold">Phone Number</label>
+                    <label htmlFor="phone" className="text-[10px] uppercase font-mono tracking-widest text-theme-muted font-bold">Phone Number</label>
                     <input 
                       type="tel" 
                       id="phone"
@@ -256,8 +256,8 @@ export default function Contact() {
                       value={formData.phone}
                       onChange={handleInputChange}
                       placeholder="+1 (555) 000-0000"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border text-slate-800 dark:text-white text-sm focus:outline-none transition-all ${
-                        errors.phone ? 'border-red-500/70 focus:border-red-500' : 'border-slate-200 dark:border-white/5 focus:border-brand-purple'
+                      className={`w-full px-4 py-3 rounded-xl bg-theme-bg dark:bg-theme-card border text-theme-text text-sm focus:outline-none transition-all ${
+                        errors.phone ? 'border-red-500/70 focus:border-red-500' : 'border-theme-border focus:border-brand-purple'
                       }`}
                     />
                     {errors.phone && <p className="text-[10px] text-red-500 font-semibold flex items-center space-x-0.5"><AlertCircle size={10} /><span>{errors.phone}</span></p>}
@@ -265,7 +265,7 @@ export default function Contact() {
 
                   {/* Subject field */}
                   <div className="space-y-1.5">
-                    <label htmlFor="subject" className="text-[10px] uppercase font-mono tracking-widest text-slate-400 font-bold">Subject</label>
+                    <label htmlFor="subject" className="text-[10px] uppercase font-mono tracking-widest text-theme-muted font-bold">Subject</label>
                     <input 
                       type="text" 
                       id="subject"
@@ -274,8 +274,8 @@ export default function Contact() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       placeholder="Project inquiry / Opportunity"
-                      className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border text-slate-800 dark:text-white text-sm focus:outline-none transition-all ${
-                        errors.subject ? 'border-red-500/70 focus:border-red-500' : 'border-slate-200 dark:border-white/5 focus:border-brand-purple'
+                      className={`w-full px-4 py-3 rounded-xl bg-theme-bg dark:bg-theme-card border text-theme-text text-sm focus:outline-none transition-all ${
+                        errors.subject ? 'border-red-500/70 focus:border-red-500' : 'border-theme-border focus:border-brand-purple'
                       }`}
                     />
                     {errors.subject && <p className="text-[10px] text-red-500 font-semibold flex items-center space-x-0.5"><AlertCircle size={10} /><span>{errors.subject}</span></p>}
@@ -285,7 +285,7 @@ export default function Contact() {
 
                 {/* Message field */}
                 <div className="space-y-1.5">
-                  <label htmlFor="message" className="text-[10px] uppercase font-mono tracking-widest text-slate-400 font-bold">Your Message</label>
+                  <label htmlFor="message" className="text-[10px] uppercase font-mono tracking-widest text-theme-muted font-bold">Your Message</label>
                   <textarea 
                     id="message"
                     name="message"
@@ -294,8 +294,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleInputChange}
                     placeholder="Describe your project, timeline, or open role here..."
-                    className={`w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-900/50 border text-slate-800 dark:text-white text-sm focus:outline-none transition-all resize-none ${
-                      errors.message ? 'border-red-500/70 focus:border-red-500' : 'border-slate-200 dark:border-white/5 focus:border-brand-purple'
+                    className={`w-full px-4 py-3 rounded-xl bg-theme-bg dark:bg-theme-card border text-theme-text text-sm focus:outline-none transition-all resize-none ${
+                      errors.message ? 'border-red-500/70 focus:border-red-500' : 'border-theme-border focus:border-brand-purple'
                     }`}
                   />
                   {errors.message && <p className="text-[10px] text-red-500 font-semibold flex items-center space-x-0.5"><AlertCircle size={10} /><span>{errors.message}</span></p>}
@@ -341,7 +341,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 50, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20, scale: 0.9 }}
-                    className={`fixed bottom-6 right-6 z-50 max-w-sm p-4 rounded-2xl shadow-2xl flex items-start space-x-3 text-sm border font-medium bg-white/95 dark:bg-slate-900/95 backdrop-blur-md ${
+                    className={`fixed bottom-6 right-6 z-50 max-w-sm p-4 rounded-2xl shadow-2xl flex items-start space-x-3 text-sm border font-medium bg-theme-sec/95 dark:bg-theme-card/95 backdrop-blur-md ${
                       status.type === 'success'
                         ? 'text-emerald-600 border-emerald-500/20 dark:text-emerald-400 dark:border-emerald-500/30'
                         : 'text-red-500 border-red-500/20 dark:text-red-400 dark:border-red-500/30'
@@ -355,14 +355,14 @@ export default function Contact() {
                       )}
                     </div>
                     <div className="flex-1">
-                      <p className="font-semibold text-slate-800 dark:text-slate-100">
+                      <p className="font-semibold text-theme-text">
                         {status.type === 'success' ? 'Success' : 'Error'}
                       </p>
-                      <p className="text-xs text-slate-600 dark:text-slate-400">{status.message}</p>
+                      <p className="text-xs text-theme-muted">{status.message}</p>
                     </div>
                     <button
                       onClick={() => setShowToast(false)}
-                      className="text-slate-400 hover:text-slate-600 dark:hover:text-slate-200 transition-colors px-1 cursor-pointer text-lg leading-none"
+                      className="text-theme-muted hover:text-theme-text transition-colors px-1 cursor-pointer text-lg leading-none"
                     >
                       &times;
                     </button>

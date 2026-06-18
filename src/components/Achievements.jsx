@@ -38,7 +38,7 @@ export default function Achievements() {
   };
 
   return (
-    <section id="achievements" className="py-24 bg-white dark:bg-slate-950">
+    <section id="achievements" className="py-24 bg-theme-bg">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Title */}
@@ -46,7 +46,7 @@ export default function Achievements() {
           <h2 className="text-xs uppercase tracking-widest text-brand-purple dark:text-brand-cyan font-bold font-mono mb-2">
             08 / Milestones
           </h2>
-          <h3 className="text-3xl sm:text-4xl font-extrabold text-slate-800 dark:text-white">
+          <h3 className="text-3xl sm:text-4xl font-extrabold text-theme-text">
             Key Achievements
           </h3>
           <div className="mt-2 w-16 h-1 bg-gradient-to-r from-brand-cyan to-brand-purple mx-auto rounded-full" />
@@ -64,18 +64,18 @@ export default function Achievements() {
             <motion.div
               key={ach.id}
               variants={itemVariants}
-              className="glass-card p-6 rounded-2xl border border-slate-200 dark:border-white/5 flex flex-col items-start text-left h-full"
+              className="glass-card p-6 rounded-2xl border border-theme-border flex flex-col items-start text-left h-full"
             >
               {/* Icon Circle */}
-              <div className="p-3.5 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-white/5 mb-4 shadow-sm flex items-center justify-center">
+              <div className="p-3.5 rounded-xl bg-theme-bg dark:bg-theme-card border border-theme-border mb-4 shadow-sm flex items-center justify-center">
                 {getIcon(idx)}
               </div>
 
-              <h4 className="text-base font-bold text-slate-800 dark:text-white mb-2 leading-tight">
+              <h4 className="text-base font-bold text-theme-text mb-2 leading-tight">
                 {ach.title}
               </h4>
               
-              <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed font-normal">
+              <p className="text-xs text-theme-muted leading-relaxed font-normal">
                 {ach.description}
               </p>
             </motion.div>
